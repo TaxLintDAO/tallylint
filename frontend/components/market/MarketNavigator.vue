@@ -38,7 +38,12 @@
         </q-btn>
       </div>
 
-      <div v-else>
+      <div v-else class="flex-y-center q-gutter-x-lg">
+        <router-link :to="'/market/post'">
+          <q-btn color="primary">Predict</q-btn>
+        </router-link>
+
+        <q-separator vertical inset />
         <q-btn flat round color="primary" class="avatar">
           <q-avatar color="primary" text-color="white">
             {{ showAvatar }}
@@ -102,11 +107,16 @@
     <div class="nav-tab">
       <div class="flex-y-center q-gutter-sm">
         <span> Live </span>
-
-        <q-badge align="middle" class="breathing-light" rounded />
+        <div class="breathing-light"></div>
       </div>
 
-      <q-tabs v-model="tab" narrow-indicator dense align="justify" class="">
+      <q-tabs
+        v-model="tab"
+        narrow-indicator
+        dense
+        align="justify"
+        class="q-ml-md"
+      >
         <q-tab :ripple="false" name="all" label="All" />
         <q-tab :ripple="false" name="icp" label="ICP" />
         <q-tab :ripple="false" name="eth" label="ETH" />
@@ -259,6 +269,7 @@ const showPId = computed<string>(() => {
   return showUsername("", principal.value)
 })
 </script>
+
 <style lang="scss">
 .navigator-container {
   width: 100%;
@@ -312,6 +323,8 @@ const showPId = computed<string>(() => {
   transform: rotate(180deg); /* 旋转180度 */
 }
 .breathing-light {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: red;
   animation: breathing 2s infinite ease-in-out;

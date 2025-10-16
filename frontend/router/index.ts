@@ -6,9 +6,11 @@ import Neurons from "@/views/app/modules/Neurons.vue"
 import TaxReport from "@/views/app/modules/TaxReport.vue"
 import Wallet from "@/views/app/modules/Wallet.vue"
 import Home from "@/views/home/Home.vue"
-import Market from "@/views/market/marketHome.vue"
+import Market from "@/views/market/home/MarketHome.vue"
+import PostPredict from "@/views/market/post-predict/PostPredict.vue"
 import Settings from "@/views/settings/Settings.vue"
 import Transactions from "@/views/transactions/Transactions.vue"
+import MarketLayout from "@/components/market/MarketLayout.vue"
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
 import errors from "./modules/errors"
 
@@ -18,11 +20,14 @@ const routes: Array<RouteRecordRaw> = [
     name: "Home",
     component: Home,
   },
-  {
-    path: "/market",
-    name: "Market",
-    component: Market,
-  },
+  // {
+  //   path: "/market",
+  //   component: MarketLayout, // 只是一个布局容器
+  //   children: [
+  //     { path: "", name: "Market", component: Market }, // /market
+  //     { path: "post", name: "Post", component: PostPredict }, // /market/post
+  //   ],
+  // },
   {
     path: "/app",
     // name: 'App',

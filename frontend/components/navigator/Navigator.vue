@@ -7,15 +7,23 @@
         class="cursor-pointer"
         @click="onHome"
       />
-      <q-btn
-        color="primary"
-        class="login-button"
-        @click="onLogin()"
-        :loading="loading"
-        no-caps
-      >
-        Launch app
-      </q-btn>
+
+      <div class="flex-y-center">
+        <!-- <router-link :to="'/market'">
+          <q-btn flat rounded label="Market" class="q-mr-md" no-caps />
+        </router-link> -->
+
+        <q-separator dark vertical />
+        <q-btn
+          color="primary"
+          class="login-button"
+          @click="onLogin()"
+          :loading="loading"
+          no-caps
+        >
+          Launch app
+        </q-btn>
+      </div>
     </q-toolbar>
   </div>
 </template>

@@ -249,7 +249,7 @@ const columns = [
     field: "last_transaction_time",
   },
 ]
-const froms = ["NNS", "Plug", "Stoic", "AstorMe"]
+const froms = ["NNS", "Plug", "Stoic", "AstorMe", "OISY"]
 const walletDialogVisible = ref(false)
 const loading = ref(false)
 const tableLoading = ref(false)

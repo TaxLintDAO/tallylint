@@ -1,9 +1,12 @@
 <template>
-  <div class="market-container"><marketNav> </marketNav>market</div>
+  <div class="market-container">
+    <marketBanner />
+    market
+  </div>
 </template>
 
 <script lang="ts" setup>
-import marketNav from "./modules/marketNavigator.vue"
+import marketBanner from "./modules/Banner.vue"
 </script>
 
 <style lang="scss">
