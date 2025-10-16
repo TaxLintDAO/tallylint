@@ -20,7 +20,7 @@ pub struct BackupChunk {
 }
 #[update(guard = "admin_guard")]
 fn backup_data(index: u32) -> Result<BackupChunk, String> {
-    const CHUNK_SIZE: usize = 2 * 1024 * 1024; // 每个块的大小为 2 MB
+    const CHUNK_SIZE: usize = 1024 * 1024; // 每个块的大小为 1 MB
 
     STATE.with(|state| {
         let state = state.borrow();

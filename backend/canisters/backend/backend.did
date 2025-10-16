@@ -135,6 +135,7 @@ type UserConfig = record {
   time_zone : text;
   base_currency : text;
   tax_method : text;
+  test_field : text;
 };
 type UserProfile = record {
   owner : principal;

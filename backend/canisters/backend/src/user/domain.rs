@@ -23,15 +23,16 @@ pub struct UserConfig {
   pub tax_method: String,
   pub base_currency: String,
   pub time_zone: String,
-  // pub test_field:String
+  #[serde(default)]
+  pub test_field:String
 }
 impl UserConfig {
-  pub fn new(tax_method: String,base_currency:String,time_zone:String) -> UserConfig {
+  pub fn new(tax_method: String,base_currency:String,time_zone:String,test_field:String) -> UserConfig {
     UserConfig{
         tax_method,
         base_currency,
         time_zone,
-        // test_field
+        test_field
     }
   }
 }

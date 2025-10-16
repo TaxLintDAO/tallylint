@@ -57,7 +57,7 @@ impl UserService {
       "FIFO".to_string(),
       "USD".to_string(),
       "".to_string(),
-      // "".to_string(),
+      "".to_string(),
     );
     self.configs.insert(owner.to_string(), config);
   }
@@ -104,7 +104,7 @@ impl UserService {
           "FIFO".to_string(),
           "USD".to_string(),
           "".to_string(),
-          // "".to_string(),
+          "".to_string(),
         );
         self.configs.insert(owner.to_string(), config.clone());
         return Result::Ok(config.clone());
