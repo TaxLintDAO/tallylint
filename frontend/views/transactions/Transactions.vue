@@ -1081,4 +1081,3 @@ const toTransactionDetail = (symbol: string, hash: string) => {
   }
 }
 </style>
-@/types/token

@@ -513,4 +513,3 @@ const changeDate = () => {
   background: rgba(0, 0, 0, 0.02);
 }
 </style>
-@/api/icp @/api/icp
